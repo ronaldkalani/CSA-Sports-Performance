@@ -54,6 +54,23 @@ public/
 
 # Windows
 *.lnk
+Application Data/
+Cookies/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Start Menu/
+Templates/
+Tracing/
+Favorites/
+Contacts/
+Documents/
+Downloads/
+Pictures/
+Videos/
 
 # AI/ML (Models, Checkpoints, Data)
 *.h5
@@ -66,7 +83,8 @@ public/
 *.pt
 models/
 *.model
-data/
+data/**/*
+!data/important_dataset/
 *.csv
 *.tsv
 *.xls
@@ -76,6 +94,9 @@ data/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+*.nbconvert/
+*.nb.html
+*.nb.pdf
 
 # Docker
 docker-compose.override.yml
@@ -87,14 +108,14 @@ docker-compose.override.yml
 
 # Git
 !.gitignore
-# Ignore all system directories
 AppData/
 NTUSER.DAT*
 *.ini
-*.log
 *.manifest
 *.config.xml
 *.jtx
+*.blf
+*.regtrans-ms
 
 # Coverage reports
 coverage/
@@ -105,6 +126,7 @@ coverage/
 *.tmp
 *.temp
 ~$*
+*.bak
 
 # OS generated files
 *.swp
