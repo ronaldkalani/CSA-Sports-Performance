@@ -1,59 +1,9 @@
-### AL ###
-# General
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-logs/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Python (Backend)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-*.env
-.env.local
-.env.*.local
-
-# Django/Flask specific
-db.sqlite3
-instance/
-*.pot
-*.pyc
-media/
-staticfiles/
-local_settings.py
-
-# Node.js (Frontend)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-
-# Build directories (Frontend)
-dist/
-build/
-public/
-
-# IDE/Editor settings
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
-
-# MacOS
-.DS_Store
-
+### Ignore system files ###
 # Windows
 *.lnk
+NTUSER.DAT*
+*.ini
+AppData/
 Application Data/
 Cookies/
 Local Settings/
@@ -65,14 +15,35 @@ SendTo/
 Start Menu/
 Templates/
 Tracing/
-Favorites/
-Contacts/
-Documents/
-Downloads/
-Pictures/
-Videos/
 
-# AI/ML (Models, Checkpoints, Data)
+### Ignore Python-related files ###
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.env
+.env.local
+
+### Ignore IDE/editor files ###
+.vscode/
+.idea/
+
+### Ignore logs ###
+*.log
+logs/
+
+### Ignore build and temp files ###
+dist/
+build/
+*.tmp
+*.temp
+~$*
+
+### Ignore AI/ML files ###
+models/
+*.model
 *.h5
 *.ckpt
 *.onnx
@@ -81,10 +52,6 @@ Videos/
 *.pb
 *.tflite
 *.pt
-models/
-*.model
-data/**/*
-!data/important_dataset/
 *.csv
 *.tsv
 *.xls
@@ -92,42 +59,9 @@ data/**/*
 *.json
 *.parquet
 
-# Jupyter Notebook
+### Ignore Jupyter Notebook checkpoints ###
 .ipynb_checkpoints/
-*.nbconvert/
-*.nb.html
-*.nb.pdf
 
-# Docker
-docker-compose.override.yml
-.dockerignore
-
-# Environment Files
-.env
-.env.test
-
-# Git
+### Ignore Git ###
 !.gitignore
-AppData/
-NTUSER.DAT*
-*.ini
-*.manifest
-*.config.xml
-*.jtx
-*.blf
-*.regtrans-ms
 
-# Coverage reports
-coverage/
-*.cover
-.hypothesis/
-
-# Temporary files
-*.tmp
-*.temp
-~$*
-*.bak
-
-# OS generated files
-*.swp
-*~
