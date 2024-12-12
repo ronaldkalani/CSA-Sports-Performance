@@ -87,6 +87,14 @@ docker-compose.override.yml
 
 # Git
 !.gitignore
+# Ignore all system directories
+AppData/
+NTUSER.DAT*
+*.ini
+*.log
+*.manifest
+*.config.xml
+*.jtx
 
 # Coverage reports
 coverage/
