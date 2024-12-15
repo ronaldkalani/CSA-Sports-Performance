@@ -1,0 +1,16 @@
+/* Global styles for the application */
+.app {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+header,
+footer {
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  text-align: center;
+}
