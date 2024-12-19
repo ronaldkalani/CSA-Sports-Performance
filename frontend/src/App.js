@@ -1,19 +1,25 @@
 import React from 'react';
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Dashboard from './components/Dashboard/Dashboard';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Home from './pages/Home';
+import DashboardPage from './pages/DashboardPage';
+import TrainingModulePage from './pages/TrainingModulePage';
 
-function App() {
-  return (
-    <div className="app">
-      <Header />
-      <main>
-        <Dashboard />
-      </main>
-      <Footer />
+const App = () => (
+  <Router>
+    <Navbar />
+    <div style={{ display: 'flex' }}>
+      <Sidebar />
+      <div style={{ marginLeft: '200px', padding: '20px', flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/training" element={<TrainingModulePage />} />
+        </Routes>
+      </div>
     </div>
-  );
-}
+  </Router>
+);
 
 export default App;
