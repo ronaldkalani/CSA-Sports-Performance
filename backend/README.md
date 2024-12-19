@@ -1,4 +1,5 @@
 CSA-Sports-Performance Backend
+
 This is the backend of the CSA Sports Performance Platform, built using Django and Django REST Framework (DRF). It provides APIs for managing workshops, skill tracking, feedback, and more.
 
 Features
@@ -32,6 +33,7 @@ backend/
 
 Getting Started
 Setup
+
 1. Clone the Repository:
 git clone https://github.com/ronaldkalani/CSA-Sports-Performance.git
 cd CSA-Sports-Performance/backend
