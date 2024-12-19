@@ -82,6 +82,12 @@ Create a Superuser
 To access Django’s admin interface:
 python manage.py createsuperuser
 
+Username (leave blank to use 'hp'): Admin
+Email address: 
+Password:
+Password (again):
+Superuser created successfully.
+
 Access the admin panel at:
 http://127.0.0.1:8000/admin/
 
