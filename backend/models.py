@@ -1,45 +1,29 @@
-from sqlalchemy import Column, Integer, String, Text, Float, ForeignKey
-from sqlalchemy.orm import relationship
-from .database import Base
+# models.py
 
-# Athlete table
-class Athlete(Base):
-    __tablename__ = "athletes"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
-    email = Column(String, unique=True, index=True)
-    age = Column(Integer)
-    sport = Column(String)
+from django.db import models
 
-    feedback = relationship("Feedback", back_populates="athlete")
+class Workshop(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True, null=True)
+    date = models.DateField()
 
-# Workshop table
-class Workshop(Base):
-    __tablename__ = "workshops"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, index=True)
-    description = Column(Text)
-    date = Column(String)
+    def __str__(self):
+        return self.title
 
-# Skill table
-class Skill(Base):
-    __tablename__ = "skills"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
-    description = Column(Text)
-    athlete_id = Column(Integer, ForeignKey("athletes.id"))
 
-# Feedback table
-class Feedback(Base):
-    __tablename__ = "feedback"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    athlete_id = Column(Integer, ForeignKey("athletes.id"))
-    comments = Column(Text)
-    rating = Column(Float)
+class Skill(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    athletes = models.JSONField(default=list)  # Store list of athletes
 
-    athlete = relationship("Athlete", back_populates="feedback")
- 
+    def __str__(self):
+        return self.name
+
+
+class Feedback(models.Model):
+    athlete_id = models.IntegerField()
+    comments = models.TextField()
+    rating = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"Feedback from Athlete {self.athlete_id}"
