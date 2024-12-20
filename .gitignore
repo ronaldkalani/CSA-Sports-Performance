@@ -1,67 +1,38 @@
-### Ignore system files ###
-# Windows
-*.lnk
-NTUSER.DAT*
-*.ini
-AppData/
-Application Data/
-Cookies/
-Local Settings/
-My Documents/
-NetHood/
-PrintHood/
-Recent/
-SendTo/
-Start Menu/
-Templates/
-Tracing/
-
-### Ignore Python-related files ###
+# Python-specific
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+*.env
+*.venv
 env/
 venv/
-.env
-.env.local
+ENV/
+env.bak/
+*.swp
+*.swo
 
-### Ignore IDE/editor files ###
-.vscode/
-.idea/
+# Django-specific
+db.sqlite3
+/media/
+staticfiles/
 
-### Ignore logs ###
+# System-specific
+.DS_Store
+Thumbs.db
 *.log
-logs/
+*.pot
+*.pyc
+*.pid
+*.seed
+*.cover
+*.egg-info/
+.venv/
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
 
-### Ignore build and temp files ###
-dist/
-build/
-*.tmp
-*.temp
-~$*
-
-### Ignore AI/ML files ###
-models/
-*.model
-*.h5
-*.ckpt
-*.onnx
-*.pkl
-*.joblib
-*.pb
-*.tflite
-*.pt
-*.csv
-*.tsv
-*.xls
-*.xlsx
-*.json
-*.parquet
-
-### Ignore Jupyter Notebook checkpoints ###
-.ipynb_checkpoints/
-
-### Ignore Git ###
-!.gitignore
+# Windows-specific
+AppData/
 
