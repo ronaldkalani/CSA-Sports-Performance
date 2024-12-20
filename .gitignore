@@ -1,16 +1,14 @@
 # Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+*.env
 env/
 venv/
-.env
 
 # Django
 db.sqlite3
 /media/
-/staticfiles/
+staticfiles/
 
 # Node.js
 node_modules/
@@ -19,3 +17,8 @@ npm-debug.log
 # System
 .DS_Store
 Thumbs.db
+*.log
+
+# Git
+.git/
+
