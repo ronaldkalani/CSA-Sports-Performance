@@ -1,4 +1,4 @@
-# Python-specific
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -12,27 +12,15 @@ env.bak/
 *.swp
 *.swo
 
-# Django-specific
+# Django
 db.sqlite3
 /media/
 staticfiles/
 
-# System-specific
+# System
 .DS_Store
 Thumbs.db
-*.log
-*.pot
-*.pyc
-*.pid
-*.seed
-*.cover
-*.egg-info/
-.venv/
-.idea/
-.vscode/
-*.sublime-workspace
-*.sublime-project
 
-# Windows-specific
-AppData/
-
+# Node.js
+node_modules/
+npm-debug.log
