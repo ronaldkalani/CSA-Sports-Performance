@@ -1,0 +1,4 @@
+Django==<your-version>
+djangorestframework==<your-version>  # If you're using DRF
+psycopg2-binary==<your-version>     # If you're using PostgreSQL
+Pillow==<your-version>              # For image handling, if applicable
