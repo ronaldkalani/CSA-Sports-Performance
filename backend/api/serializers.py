@@ -17,3 +17,4 @@ class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
         fields = '__all__'
+skills = models.ManyToManyField(Skill, related_name='workshops')
