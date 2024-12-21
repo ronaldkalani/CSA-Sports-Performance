@@ -61,4 +61,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+INSTALLED_APPS = [
+    ...
+    'api',
+    'rest_framework',  # Add Django REST framework
+]
 
