@@ -8,17 +8,12 @@ venv/
 # Django
 db.sqlite3
 /media/
-staticfiles/
+/staticfiles/
 
-# Node.js
+# Node.js (if used)
 node_modules/
 npm-debug.log
 
 # System
 .DS_Store
 Thumbs.db
-*.log
-
-# Git
-.git/
-
