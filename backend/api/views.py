@@ -13,3 +13,4 @@ class SkillViewSet(viewsets.ModelViewSet):
 class FeedbackViewSet(viewsets.ModelViewSet):
     queryset = Feedback.objects.all()
     serializer_class = FeedbackSerializer
+skills = models.ManyToManyField(Skill, related_name='workshops')
